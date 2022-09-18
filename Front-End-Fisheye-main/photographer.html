@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+
+
+  <title>Fisheye - photographe </title>
+</head>
+
+<body>
+  <header>
+    <a href="./index.html" class="logo" title="recharger la page" id="retour">
+      <img src="assets/images/logo.png" class="logo" />
+    </a>
+  </header>
+  <main id="main">
+    <section id="photographeProfile"></section>
+
+    <section class="filter">
+      <h3 id="trierPar">Trier par </h3>
+      <select class="filter-select" size="1"  onChange="location = this.options[this.selectedIndex].value;"><span>Popularité</span>
+        <option value="lien.html" >popularité</option>
+        <option value="lien.html" >date</option>
+        <option value="lien.html" >titre</option>
+      </select>
+  </section>
+  <section id="displayMedia">
+    <ul id="medialist" class="img-colums">
+    </ul>
+    </section>
+  </main>
+  <div id="contact_modal" class="contact_modal">
+    <div class="modal">
+      <header>
+        <h2>Contactez-moi</h2>
+        <img src="assets/icons/close.svg" onclick="closeModal()" />
+      </header>
+      <form class="form" id="form" name="formulaire" action="photographer.html" method="post" onsubmit="return validate();">
+        <div>
+          <label>Prénom</label>
+          <input id="surname" name="surname"/>
+          <span class="error" id="errorsurname"></span>
+          <label class="name">Nom</label>
+          <input />
+          <label class="mail">Email</label>
+          <input />
+          <label class="textmessage">Votre message</label>
+          <textarea name="" id="" cols="108" rows="10"></textarea>
+        </div>
+        <button class="contact_button">Envoyer</button>
+      </form>
+    </div>
+  </div>
+  <script src="scripts/pages/photographer.js"></script>
+  <script src="scripts/factories/photographer.js"></script>
+  <script src="scripts/utils/contactform.js"></script>
+  <script src="scripts/utils/lightbox.js"></script>
+</body>
+
+</html>

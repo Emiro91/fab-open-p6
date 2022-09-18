@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../FishEye_Photos"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Front-End-Fisheye-main"
+	}
+}
