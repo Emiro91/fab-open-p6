@@ -36,11 +36,18 @@ async function medialist(photographer) {
 
 };
 
+const popularite=document.getElementById("popularite");
+const date=document.getElementById("date");
+const titre=document.getElementById("titre");
+
+//popularite.addEventListener("click",mediaFilter(photographer.media, "Popularite"));
+
 async function init() {
     // Récupère les datas des photographes
     const photographer = await getPhotographer();
     displayData(photographer.photographers);
     medialist(photographer.media);
+    popularite.addEventListener("click",mediaFilter(photographer.media, "Popularite"));
 };
 
 init();

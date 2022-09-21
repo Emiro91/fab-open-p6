@@ -1,28 +1,28 @@
 function mediaFilter(mediaListArrayFiltered, photographerItem) {
 
-	const currentFilter = document.getElementById('currentFilter');
-	const observer = new MutationObserver(function () {
+	//const currentFilter = document.getElementById('currentFilter');
+	//const observer = new MutationObserver(function () {
 
-		const newFilterValue = currentFilter.innerHTML;
-		const mediaList = document.querySelector('.photographer-page__media');
-		mediaList.innerHTML = '';
+		//const newFilterValue = currentFilter.innerHTML;
+		//const mediaList = document.querySelector('.photographer-page__media');
+		//mediaList.innerHTML = '';
         
 
-		if (newFilterValue === 'Date') { 
+		if (photographerItem === 'Date') { 
 			const mediaListArrayFilteredByUser = mediaListArrayFiltered.sort(function (a, b) {return new Date(b.date) - new Date(a.date);});
-			displayMedia(mediaListArrayFilteredByUser, photographerItem);  
+			medialist(mediaListArrayFilteredByUser);  
             
             
 		}
 
-		if (newFilterValue === 'Popularité') {
+		if (photographerItem === 'Popularite') {
 			const mediaListArrayFilteredByUser = mediaListArrayFiltered.sort(function (a, b) { return a.likes - b.likes;});
-			displayMedia(mediaListArrayFilteredByUser, photographerItem);
+			medialist(mediaListArrayFilteredByUser);
             
             
 		}
     
-		if (newFilterValue === 'Titre') {
+		if (photographerItem === 'Titre') {
 			const mediaListArrayFilteredByUser = mediaListArrayFiltered.sort(function (a, b) {
 				let x = a.alt;
 				let y = b.alt;
@@ -30,11 +30,11 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
 				if (x > y) return -1;
 				return 0;
 			});
-			displayMedia(mediaListArrayFilteredByUser, photographerItem);
+			medialist(mediaListArrayFilteredByUser);
             
             
 		}
-	});
+	//});
 
-	observer.observe(currentFilter, { subtree: true, childList: true });
+	//observer.observe(currentFilter, { subtree: true, childList: true });
 }

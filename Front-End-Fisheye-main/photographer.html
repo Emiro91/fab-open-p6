@@ -24,9 +24,9 @@
     <section class="filter">
       <h3 id="trierPar">Trier par </h3>
       <select class="filter-select" size="1"  onChange="location = this.options[this.selectedIndex].value;"><span>Popularité</span>
-        <option value="lien.html" >popularité</option>
-        <option value="lien.html" >date</option>
-        <option value="lien.html" >titre</option>
+        <option id="popularite" >popularité</option>
+        <option id="date" >date</option>
+        <option id="titre" >titre</option>
       </select>
   </section>
   <section id="displayMedia">
@@ -56,6 +56,7 @@
       </form>
     </div>
   </div>
+  <script src="scripts/utils/filtre.js"></script>
   <script src="scripts/pages/photographer.js"></script>
   <script src="scripts/factories/photographer.js"></script>
   <script src="scripts/utils/contactform.js"></script>
