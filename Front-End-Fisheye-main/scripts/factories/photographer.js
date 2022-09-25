@@ -87,7 +87,7 @@ function getProfilePage() {
 
     const heart = document.createElement("span");
     heart.setAttribute("aria-label", "likes");
-    heart.setAttribute("class", "fas fa-heart");
+    heart.setAttribute("class", "fa fa-heart");
     const priceDay = document.createElement("span");
     priceDay.textContent = `${price}€ /jour`;
 
@@ -111,30 +111,46 @@ function getmediasPage(){
     
     const jpg = `assets/images/media/${image}`;
     const mp4 = `assets/images/media/${video}`;
-    const li=document.createElement("li");       
+    const li=document.createElement("li");  
+
     const ahref=document.createElement("a");
     ahref.setAttribute("class","cards-media-img");
     ahref.setAttribute("role","button");
     ahref.setAttribute("title",title);
     ahref.setAttribute("aria-describedby","ouvrir le slider");
     ahref.setAttribute("href","#");
-    const titlep=document.createElement("p");
-    titlep.setAttribute("class","cards-media-title");
-    titlep.textContent= title ;                       
-    const div=document.createElement("div");
+
+    //const titlep=document.createElement("p");
+    //titlep.setAttribute("class","cards-media-title");
+    //titlep.textContent= title ;  
+
+    const divlike=document.createElement("div");
     div.setAttribute("class","header-like");
-    const compteurp= document.createElement("p")
-    compteurp.setAttribute("class","compteur"); 
-    compteurp.setAttribute("aria-label","Nombre de likes 300");
-    compteurp.setAttribute("tabindex","0>300<");
-    compteurp.textContent= `${likes}`;                   
+    
+    const namep= document.createElement("p")
+    p.setAttribute("class","item-name"); 
+         
+    const divinfo=document.createElement("div");
+    div.setAttribute("class","item-info");
+
+    const infop=document.createElement ("p");
+    p.setAttribute("class","info-prices");
+    p.setAttribute("id","info-price");
+
     const button=document.createElement("button");
-    button.setAttribute("class","heart-link");
+    button.setAttribute("class","button--like");
     button.setAttribute("aria-label","aimer cette photo");
-    button.setAttribute("role","button");
-    button.setAttribute("tabindex","0");
-    const i=document.createElement ("i");
-    i.setAttribute("class","heart far fa-heart");
+    button.setAttribute("id","likebutton");
+    
+    const buttonp=document.createElement ("p");
+    p.setAttribute("class","info-likes");
+    p.setAttribute("id","likenumber");
+   
+
+    const buttoni=document.createElement ("i");
+    i.setAttribute("class","fa fa-heart");
+    i.setAttribute("id","icon-heart");
+    i.setAttribute("aria-hidden","true");
 
     // If JPG -> <img>
     if (jpg.split('.').pop() === 'jpg') {
@@ -146,11 +162,10 @@ function getmediasPage(){
         
         li.appendChild(ahref);
         li.appendChild(img);
-        li.appendChild(div);
-        div.appendChild(titlep);
-        div.appendChild(compteurp);
-        compteurp.appendChild(button);
-        button.appendChild(i);
+        divlike.appendChild(namep);
+        divinfo.appendChild(infop);
+        button.appendChild(buttonp);
+        buttonp.appendChild(buttoni);
         }
     // If MP4 -> <video>
     if (mp4.split('.').pop() === 'mp4') {
@@ -168,18 +183,11 @@ function getmediasPage(){
         li.appendChild(ahref);
         li.appendChild(videoPlayer);
         videoPlayer.appendChild(source);
-        li.appendChild(div);
-        div.appendChild(titlep);
-        div.appendChild(compteurp);
-        compteurp.appendChild(button);
-        button.appendChild(i);
-        /*album.appendChild(videoPlayer);
-        videoPlayer.appendChild(source);
-        album.appendChild(caption);
-        caption.appendChild(albumTitle);
-        caption.appendChild(like);
-        like.appendChild(compteur);
-        like.appendChild(heart);*/
+        divlike.appendChild(namep);
+        divinfo.appendChild(infop);
+        button.appendChild(buttonp);
+        buttonp.appendChild(buttoni);
+    
         }
         
     return li;

@@ -23,10 +23,10 @@
 
     <section class="filter">
       <h3 id="trierPar">Trier par </h3>
-      <select class="filter-select" size="1"  onChange="location = this.options[this.selectedIndex].value;"><span>Popularité</span>
-        <option id="popularite" >popularité</option>
-        <option id="date" >date</option>
-        <option id="titre" >titre</option>
+      <select id="selectbox" class="filter-select"><span>Popularité</span>
+        <option value="popularite">popularité</option>
+        <option value="date">date</option>
+        <option value="titre">titre</option>
       </select>
   </section>
   <section id="displayMedia">
@@ -61,6 +61,7 @@
   <script src="scripts/factories/photographer.js"></script>
   <script src="scripts/utils/contactform.js"></script>
   <script src="scripts/utils/lightbox.js"></script>
+  <script src="scripts/utils/counter-like.js"></script>
 </body>
 
 </html>

@@ -26,31 +26,30 @@ async function displayData(photographer) {
 };
 async function medialist(photographer) {
     const mediaSection = document.getElementById("medialist");
+    mediaSection.innerHTML = '';
     photographer.forEach((media) => {
 
 
-    const mediaModel = photographerFactory(media);
-    const medias = mediaModel.getmediasPage();
-    mediaSection.appendChild(medias);
-});
+        const mediaModel = photographerFactory(media);
+        const medias = mediaModel.getmediasPage();
+        mediaSection.appendChild(medias);
+    });
 
 };
 
-const popularite=document.getElementById("popularite");
-const date=document.getElementById("date");
-const titre=document.getElementById("titre");
+const selectbox = document.getElementById("selectbox");
 
-//popularite.addEventListener("click",mediaFilter(photographer.media, "Popularite"));
 
 async function init() {
     // Récupère les datas des photographes
     const photographer = await getPhotographer();
     displayData(photographer.photographers);
     medialist(photographer.media);
-    popularite.addEventListener("click",mediaFilter(photographer.media, "Popularite"));
+    selectbox.addEventListener("change", (e) => {
+        let photographerMediaList = mediaFilter(photographer.media, e.target.value);
+        console.log("photographer media", photographerMediaList);
+        medialist(photographerMediaList);
+    });
 };
 
 init();
-
-
-

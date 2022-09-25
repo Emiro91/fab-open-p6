@@ -144,15 +144,74 @@ form input {
   .img-colums{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
   li{
     list-style-type: none;
   }
-  .heart-link {
+  .button--like {
     border-radius: 50px;
+  }
+  .icon-heart:hover{
+    transform: scale(1.2);
+    opacity: 1;
+    z-index: 1000;
+  }
+ #icon-heart{
+    color: #901C1C;
+  }
+#icon-heart:hover{
+    position: absolute;
+    color: green;
+    transition: opacity 0.2s ease-in-out, transform 0.4s cubic-bezier(0.74, 1.13, 1, 1.63);
   }
   .header-like {
     display: flex;
-    flex-direction: initial;
+    align-items: baseline;
     gap: 200px;
+  }
+  .compteur {
+    gap: 10px;
+    display: flex;
+    align-items: baseline;
+  }
+  
+
+  @media screen and (max-width: 128px) { .img-colums{
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 9em);
+    grid-gap: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  }
+
+  @media screen and (max-width: 400px) { .img-colums{
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 9em);
+    grid-gap: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  }
+  @media screen and (max-width: 500px) { .img-colums{
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 9em);
+    grid-gap: 20px;
+    width: 50px;
+    height: 50px;
+  }
+  }
+  @media screen and (max-width: 700px) { .img-colums{
+  
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 9em);
+    grid-gap: 20px;
+    width: 50px;
+    height: 50px;
+  }
   }
