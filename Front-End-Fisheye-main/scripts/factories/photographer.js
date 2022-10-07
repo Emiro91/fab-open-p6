@@ -106,51 +106,51 @@ function getProfilePage() {
     return photographHeader;
 }
 
-function getmediasPage(){
+function getmediasPage() {
 
-    
+
     const jpg = `assets/images/media/${image}`;
     const mp4 = `assets/images/media/${video}`;
-    const li=document.createElement("li");  
+    const li = document.createElement("li");
 
-    const ahref=document.createElement("a");
-    ahref.setAttribute("class","cards-media-img");
-    ahref.setAttribute("role","button");
-    ahref.setAttribute("title",title);
-    ahref.setAttribute("aria-describedby","ouvrir le slider");
-    ahref.setAttribute("href","#");
+    const ahref = document.createElement("a");
+    ahref.setAttribute("class", "cards-media-img");
+    ahref.setAttribute("role", "button");
+    ahref.setAttribute("title", title);
+    ahref.setAttribute("aria-describedby", "ouvrir le slider");
+    ahref.setAttribute("href", "#");
 
     //const titlep=document.createElement("p");
     //titlep.setAttribute("class","cards-media-title");
     //titlep.textContent= title ;  
 
-    const divlike=document.createElement("div");
-    div.setAttribute("class","header-like");
-    
-    const namep= document.createElement("p")
-    p.setAttribute("class","item-name"); 
-         
-    const divinfo=document.createElement("div");
-    div.setAttribute("class","item-info");
+    const divlike = document.createElement("div");
+    divlike.setAttribute("class", "header-like");
 
-    const infop=document.createElement ("p");
-    p.setAttribute("class","info-prices");
-    p.setAttribute("id","info-price");
+    const namep = document.createElement("p")
+    namep.setAttribute("class", "item-name");
 
-    const button=document.createElement("button");
-    button.setAttribute("class","button--like");
-    button.setAttribute("aria-label","aimer cette photo");
-    button.setAttribute("id","likebutton");
-    
-    const buttonp=document.createElement ("p");
-    p.setAttribute("class","info-likes");
-    p.setAttribute("id","likenumber");
-   
+    const divinfo = document.createElement("div");
+    divinfo.setAttribute("class", "item-info");
 
-    const buttoni=document.createElement ("i");
-    i.setAttribute("class","fa fa-heart");
-    i.setAttribute("id","icon-heart");
-    i.setAttribute("aria-hidden","true");
+    const infop = document.createElement("p");
+    infop.setAttribute("class", "info-prices");
+    infop.setAttribute("id", "info-price");
+
+    const button = document.createElement("button");
+    button.setAttribute("class", "button--like");
+    button.setAttribute("aria-label", "aimer cette photo");
+    button.setAttribute("id", "likebutton");
+
+    const buttonp = document.createElement("p");
+    buttonp.setAttribute("class", "info-likes");
+    buttonp.setAttribute("id", "likenumber");
+
+
+    const buttoni = document.createElement("i");
+    buttoni.setAttribute("class", "fa fa-heart");
+    buttoni.setAttribute("id", "icon-heart");
+    buttoni.setAttribute("aria-hidden", "true");
 
     // If JPG -> <img>
     if (jpg.split('.').pop() === 'jpg') {
@@ -159,14 +159,15 @@ function getmediasPage(){
         img.setAttribute('src', jpg);
         img.setAttribute('alt', title);
         img.setAttribute('tabindex', '0');
-        
+
         li.appendChild(ahref);
         li.appendChild(img);
+        li.appendChild(divlike);
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
         button.appendChild(buttonp);
         buttonp.appendChild(buttoni);
-        }
+    }
     // If MP4 -> <video>
     if (mp4.split('.').pop() === 'mp4') {
         const videoPlayer = document.createElement('video');
@@ -177,9 +178,9 @@ function getmediasPage(){
         source.setAttribute('type', 'video/mp4');
         source.setAttribute('class', 'lightboxImg');
         source.setAttribute('tabindex', '0');
-        
 
-        
+
+
         li.appendChild(ahref);
         li.appendChild(videoPlayer);
         videoPlayer.appendChild(source);
@@ -187,9 +188,9 @@ function getmediasPage(){
         divinfo.appendChild(infop);
         button.appendChild(buttonp);
         buttonp.appendChild(buttoni);
-    
-        }
-        
+
+    }
+
     return li;
 }
                

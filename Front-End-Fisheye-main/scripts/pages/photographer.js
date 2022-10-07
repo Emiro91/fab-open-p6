@@ -24,6 +24,7 @@ async function displayData(photographer) {
     const profiles = profileModel.getProfilePage();
     photographersSection.appendChild(profiles);
 };
+
 async function medialist(photographer) {
     const mediaSection = document.getElementById("medialist");
     mediaSection.innerHTML = '';
