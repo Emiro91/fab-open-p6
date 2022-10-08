@@ -140,9 +140,9 @@ function getmediasPage() {
     infop.textcontent = price ;
 
     const button = document.createElement("button");
-    button.setAttribute("class", "button--like");
+    button.setAttribute("class", "like");
     button.setAttribute("aria-label", "aimer cette photo");
-    button.setAttribute("id", "likebutton");
+    button.setAttribute("id", "btn");
 
     const buttonp = document.createElement("p")
     buttonp.setAttribute("class","likenumber");
