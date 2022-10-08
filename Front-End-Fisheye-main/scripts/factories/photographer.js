@@ -137,6 +137,7 @@ function getmediasPage() {
     const infop = document.createElement("p");
     infop.setAttribute("class", "info-prices");
     infop.setAttribute("id", "info-price");
+    infop.textcontent = price ;
 
     const button = document.createElement("button");
     button.setAttribute("class", "button--like");
@@ -146,6 +147,7 @@ function getmediasPage() {
     const buttonp = document.createElement("p")
     buttonp.setAttribute("class","likenumber");
     buttonp.setAttribute("id","infolikes");
+    buttonp.textcontent = likes ;
 
     const buttoni = document.createElement("i");
     buttoni.setAttribute("class", "fa fa-heart");
