@@ -129,6 +129,7 @@ function getmediasPage() {
 
     const namep = document.createElement("p")
     namep.setAttribute("class", "item-name");
+    namep.textContent = title ;
 
     const divinfo = document.createElement("div");
     divinfo.setAttribute("class", "item-info");
@@ -142,10 +143,9 @@ function getmediasPage() {
     button.setAttribute("aria-label", "aimer cette photo");
     button.setAttribute("id", "likebutton");
 
-    const buttonp = document.createElement("p");
-    buttonp.setAttribute("class", "info-likes");
-    buttonp.setAttribute("id", "likenumber");
-
+    const buttonp = document.createElement("p")
+    buttonp.setAttribute("class","likenumber");
+    buttonp.setAttribute("id","infolikes");
 
     const buttoni = document.createElement("i");
     buttoni.setAttribute("class", "fa fa-heart");
@@ -165,8 +165,7 @@ function getmediasPage() {
         li.appendChild(divlike);
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
-        button.appendChild(buttonp);
-        buttonp.appendChild(buttoni);
+        button.appendChild(buttoni);
     }
     // If MP4 -> <video>
     if (mp4.split('.').pop() === 'mp4') {
@@ -186,8 +185,7 @@ function getmediasPage() {
         videoPlayer.appendChild(source);
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
-        button.appendChild(buttonp);
-        buttonp.appendChild(buttoni);
+        button.appendChild(buttoni);
 
     }
 
