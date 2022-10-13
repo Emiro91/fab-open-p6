@@ -84,6 +84,7 @@ function getProfilePage() {
     priceLikes.setAttribute("class", "price");
     const likesSpan = document.createElement("span");
     likesSpan.setAttribute("class", "compteurLikeTotal");
+    likesSpan.textContent = likes;
 
     const heart = document.createElement("span");
     heart.setAttribute("aria-label", "likes");
@@ -120,35 +121,30 @@ function getmediasPage() {
     ahref.setAttribute("aria-describedby", "ouvrir le slider");
     ahref.setAttribute("href", "#");
 
-    //const titlep=document.createElement("p");
-    //titlep.setAttribute("class","cards-media-title");
-    //titlep.textContent= title ;  
-
     const divlike = document.createElement("div");
     divlike.setAttribute("class", "header-like");
 
     const namep = document.createElement("p")
     namep.setAttribute("class", "item-name");
-    namep.textContent = title ;
+    namep.textContent = title;
 
     const divinfo = document.createElement("div");
     divinfo.setAttribute("class", "item-info");
 
     const infop = document.createElement("p");
     infop.setAttribute("class", "info-prices");
-    infop.setAttribute("id", "info-price");
-    infop.textcontent = price ;
+    infop.setAttribute("id", "likeCounter");
+    infop.textContent = `${price} €`;
 
-    const button = document.createElement("button");
-    button.setAttribute("class", "like");
-    button.setAttribute("aria-label", "aimer cette photo");
-    button.setAttribute("id", "btn");
+    const divlike1 = document.createElement("div");
+    divlike1.setAttribute("id", "like");
+    divlike1.textContent = likes;
+    divlike1.setAttribute("onclick", "{buttonClick()}");
 
-    const buttonp = document.createElement("p")
-    buttonp.setAttribute("class","likenumber");
-    buttonp.setAttribute("id","infolikes");
-    buttonp.textcontent = likes ;
-
+    const buttonp = document.createElement("button")
+    buttonp.setAttribute("class", "btnlike");
+    buttonp.setAttribute("id", "likeButton");
+   
     const buttoni = document.createElement("i");
     buttoni.setAttribute("class", "fa fa-heart");
     buttoni.setAttribute("id", "icon-heart");
@@ -167,7 +163,11 @@ function getmediasPage() {
         li.appendChild(divlike);
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
-        button.appendChild(buttoni);
+
+        buttonp.appendChild(buttoni);
+        divinfo.appendChild(divlike1);
+        divlike1.appendChild(buttonp);
+        divlike.appendChild(divinfo);
     }
     // If MP4 -> <video>
     if (mp4.split('.').pop() === 'mp4') {
@@ -185,9 +185,13 @@ function getmediasPage() {
         li.appendChild(ahref);
         li.appendChild(videoPlayer);
         videoPlayer.appendChild(source);
+        li.appendChild(divlike);
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
-        button.appendChild(buttoni);
+        buttonp.appendChild(buttoni);
+        divinfo.appendChild(divlike1);
+        divlike1.appendChild(buttonp);
+        divlike.appendChild(divinfo);
 
     }
 

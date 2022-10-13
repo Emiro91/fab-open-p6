@@ -147,7 +147,7 @@ form input {
     height: 320px;
     width: 380px;
 }
-/*#lightbox {
+#lightbox {
   position: fixed;
   z-index: 1000;
   top: 0;
@@ -169,7 +169,7 @@ form input {
   padding: 4px;
   background-color: black;
   border: 2px solid white;
-}*/
+}
   .cards-media-img{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -197,7 +197,12 @@ form input {
   .header-like {
     display: flex;
     align-items: baseline;
-    gap: 200px;
+    gap: 145px;
+  }
+  .item-info {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
   }
   .compteur {
     gap: 10px;
