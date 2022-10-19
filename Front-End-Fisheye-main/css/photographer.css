@@ -178,26 +178,20 @@ form input {
   li{
     list-style-type: none;
   }
-  .button--like {
+  .likeButton {
     border-radius: 50px;
+    width: 25px;
+    height: 25px;
   }
-  .icon-heart:hover{
-    transform: scale(1.2);
-    opacity: 1;
-    z-index: 1000;
-  }
+ 
  #icon-heart{
-    color: #901C1C;
-  }
-#icon-heart:hover{
-    position: absolute;
-    color: green;
-    transition: opacity 0.2s ease-in-out, transform 0.4s cubic-bezier(0.74, 1.13, 1, 1.63);
-  }
+  color: #901C1C;
+    }
+
   .header-like {
     display: flex;
     align-items: baseline;
-    gap: 145px;
+    gap: 100px;
   }
   .item-info {
     display: flex;

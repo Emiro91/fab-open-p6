@@ -138,15 +138,17 @@ function getmediasPage() {
 
     const divlike1 = document.createElement("div");
     divlike1.setAttribute("id", "like");
-    divlike1.textContent = likes;
-    divlike1.setAttribute("onclick", "{buttonClick()}");
+    divlike1.setAttribute("class", "like");
+    //divlike1.textContent = likes;
+    // divlike1.setAttribute("onclick", "{buttonClick()}");
 
     const buttonp = document.createElement("button")
     buttonp.setAttribute("class", "btnlike");
     buttonp.setAttribute("id", "likeButton");
-   
+    buttonp.textContent = likes;
+
     const buttoni = document.createElement("i");
-    buttoni.setAttribute("class", "fa fa-heart");
+    buttoni.setAttribute("class", "fa fa-heart likeheart");
     buttoni.setAttribute("id", "icon-heart");
     buttoni.setAttribute("aria-hidden", "true");
 
@@ -164,9 +166,10 @@ function getmediasPage() {
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
 
-        buttonp.appendChild(buttoni);
+        // buttonp.appendChild(buttoni);
         divinfo.appendChild(divlike1);
         divlike1.appendChild(buttonp);
+        divlike1.appendChild(buttoni);
         divlike.appendChild(divinfo);
     }
     // If MP4 -> <video>
@@ -188,16 +191,18 @@ function getmediasPage() {
         li.appendChild(divlike);
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
-        buttonp.appendChild(buttoni);
+        // buttonp.appendChild(buttoni);
         divinfo.appendChild(divlike1);
         divlike1.appendChild(buttonp);
+        divlike1.appendChild(buttoni);
         divlike.appendChild(divinfo);
 
     }
 
     return li;
 }
-               
+    
+
     return {
         id,
         name,
