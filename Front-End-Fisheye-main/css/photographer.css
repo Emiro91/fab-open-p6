@@ -191,7 +191,7 @@ form input {
   .header-like {
     display: flex;
     align-items: baseline;
-    gap: 100px;
+    gap: 50px;
   }
   .item-info {
     display: flex;
@@ -203,7 +203,22 @@ form input {
     display: flex;
     align-items: baseline;
   }
-  
+  .price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    right: 15px;
+    bottom: 0px;
+    padding: 5px;
+    background-color: #D3573C;
+    color: #000;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 215px;
+    height: 50px;
+    font-size: 25px;
+  }
 
   @media screen and (max-width: 128px) { .img-colums{
   
