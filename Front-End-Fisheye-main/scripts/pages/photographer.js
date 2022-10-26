@@ -52,6 +52,30 @@ async function init() {
         console.log("photographer media", photographerMediaList);
         medialist(photographerMediaList);
     });
-};
+
+// Event to add likes with keyboard
+document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      if (e.target.classList.contains('incrementLike')) {
+        incrementLike(e.target);
+      }
+    }
+  });
+
+  // Init Lightbox on click
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('lightboxMedia')) {
+      initLightbox();
+    }
+  });
+  // Init Lightbox with keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      if (e.target.classList.contains('lightboxMedia')) {
+        initLightbox();
+      }
+    }
+});
+}
 
 init();

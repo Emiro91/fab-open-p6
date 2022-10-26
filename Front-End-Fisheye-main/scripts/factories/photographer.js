@@ -155,7 +155,7 @@ function getmediasPage() {
     // If JPG -> <img>
     if (jpg.split('.').pop() === 'jpg') {
         const img = document.createElement('img');
-        img.setAttribute('class', 'media-img');
+        img.setAttribute('class', 'lightboxMedia');
         img.setAttribute('src', jpg);
         img.setAttribute('alt', title);
         img.setAttribute('tabindex', '0');
