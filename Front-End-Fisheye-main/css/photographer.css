@@ -106,12 +106,14 @@ form input {
     border-radius: 50%;
 }
 .filter {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: start;
-    margin-left: 100px;
-    gap: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: start;
+  margin-left: 100px;
+  gap: 15px;
+  margin-top: -40px;
+  margin-bottom: 50px;
   }
 
 .filter-select {

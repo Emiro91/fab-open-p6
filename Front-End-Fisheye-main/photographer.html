@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
-  <link rel="stylesheet" href="lightbox.css">
+  <link rel="stylesheet" href="css/lightbox.css" type="text/css">
 
   <title>Fisheye - photographe </title>
 </head>
@@ -20,6 +20,7 @@
   </header>
   <main id="main">
     <section id="photographeProfile"></section>
+    
 
     <section class="filter">
       <h3 id="trierPar">Trier par </h3>
@@ -28,18 +29,17 @@
         <option value="date">date</option>
         <option value="titre">titre</option>
       </select>
-  </section>
-  <section id="displayMedia">
-    <ul id="medialist" class="img-colums">
-    </ul>
     </section>
-   
-	
-	  <!--<div id="myModal" class="modal">
-	<div class="modal-content" id="modal-content"
-	aria-label="image closesup view"></div>
-	</div>
-	</div>-->
+
+  <div id="medialist">
+
+    </div>
+
+    <!--<div id="myModal" class="modal">
+  <div class="modal-content" id="modal-content"
+  aria-label="image closesup view"></div>
+  </div>
+  </div>-->
   </main>
 
   <div id="lightbox">
@@ -52,10 +52,11 @@
         <h2>Contactez-moi</h2>
         <img src="assets/icons/close.svg" onclick="closeModal()" />
       </header>
-      <form class="form" id="form" name="formulaire" action="photographer.html" method="post" onsubmit="return validate();">
+      <form class="form" id="form" name="formulaire" action="photographer.html" method="post"
+        onsubmit="return validate();">
         <div>
           <label>Prénom</label>
-          <input id="surname" name="surname"/>
+          <input id="surname" name="surname" />
           <span class="error" id="errorsurname"></span>
           <label class="name">Nom</label>
           <input />
@@ -70,10 +71,11 @@
   </div>
   <script src="scripts/utils/filtre.js"></script>
   <script src="scripts/pages/photographer.js"></script>
+  <script src="scripts/utils/counter-like.js"></script>
   <script src="scripts/factories/photographer.js"></script>
   <script src="scripts/utils/contactform.js"></script>
   <script src="scripts/utils/lightbox.js"></script>
-  <script src="scripts/utils/counter-like.js"></script>
-  </body>
+
+</body>
 
 </html>
