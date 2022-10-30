@@ -85,13 +85,13 @@ p, span.no_selection {
 }
 
 #lightbox .prev {
-  left: 0;
+  left: 40px;
   border-radius: 3px 0 0 3px;
 }
 
 
 /* Position the "next button" to the right */
 #lightbox .next {
-  right: 0;
+  right: 40px;
   border-radius: 3px 0 0 3px;
 }

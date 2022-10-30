@@ -73,7 +73,7 @@ function showMedia(index) {
     video.appendChild(sourceVideo);
     container.appendChild(caption);
   }
-
+// ferme avec la croix
   const closeCursor = document.createElement('span');
   closeCursor.setAttribute('id', 'close');
   closeCursor.setAttribute('aria-label', 'Close dialog');
@@ -119,6 +119,15 @@ function showMedia(index) {
 }
 
 // Use lightbox through keyboard
+
+/*function keydown (e) {
+  if (e.key === 'Escape') {
+    this.close(e)
+  } else if (e.key = 'ArrowLeft') {
+    this.prev(e)}
+    else if (e.key = 'ArrowRight') {
+      this.next(e)}
+}*/
 
 function keyDown(e) {
   switch (e.key) {
