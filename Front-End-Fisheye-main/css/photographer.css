@@ -99,6 +99,11 @@ form input {
     border: none;
     border-radius: 5px;
 }
+
+#txtmessage {
+  width: 100%;
+}
+
 .photographImg {
     height: 200px;
     width: 200px;

@@ -1,6 +1,8 @@
 function displayModal() {
-    const modal = document.getElementById("contact_modal");
-	modal.style.display = "block";
+  const modal = document.getElementById("contact_modal");
+  modal.style.display = "block";
+  const first = document.getElementById('firstname');
+  first.focus();
 }
 
 function closeModal() {
@@ -12,10 +14,7 @@ function closeModal() {
 const dialogTile = document.querySelector(".modal");
 const btnContact = document.querySelector(".contact-btn");
 const closeBtn = document.querySelector(".close-btn");
-// closeBtn.href = "#";
 
-// closeBtn.addEventListener("click", () => closeModal());
-// btnContact.addEventListener("click", () => displayModal());
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();

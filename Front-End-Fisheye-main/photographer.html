@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css">
   <meta charset="utf-8">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
   <link rel="stylesheet" href="css/lightbox.css" type="text/css">
+  
 
   <title>Fisheye - photographe </title>
 </head>
 
 <body>
   <header>
-    <a href="./index.html" class="logo" title="recharger la page" id="retour">
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="./index.html" class="logo" title="recharger la page" id="retour">
+      <img src="assets/images/logo.png" class="logo" alt="image fish eyes logo"/>
     </a>
   </header>
   <main id="main">
@@ -23,8 +24,8 @@
     
 
     <section class="filter">
-      <h3 id="trierPar">Trier par </h3>
-      <select id="selectbox" class="filter-select"><span>Popularité</span>
+      <label for="selectbox"id="trierPar">Trier par</label>
+      <select id="selectbox" class="filter-select">
         <option value="popularite">popularité</option>
         <option value="date">date</option>
         <option value="titre">titre</option>
@@ -35,12 +36,7 @@
 
     </div>
 
-    <!--<div id="myModal" class="modal">
-  <div class="modal-content" id="modal-content"
-  aria-label="image closesup view"></div>
-  </div>
-  </div>-->
-  </main>
+   </main>
 
   <div id="lightbox">
 
@@ -50,20 +46,20 @@
     <div class="modal">
       <header>
         <h2>Contactez-moi</h2>
-        <img src="assets/icons/close.svg" onclick="closeModal()" />
+        <img src="assets/icons/close.svg" alt="icone close du formulaire" onclick="closeModal()" />
       </header>
       <form class="form" id="form" name="formulaire" action="photographer.html" method="post"
         onsubmit="return validate();">
         <div>
-          <label>Prénom</label>
-          <input id="surname" name="surname" />
+          <label for="surname" class="surname">Prénom</label>
+          <input  id="surname" name="surname"/>
           <span class="error" id="errorsurname"></span>
-          <label class="name">Nom</label>
-          <input />
-          <label class="mail">Email</label>
-          <input />
-          <label class="textmessage">Votre message</label>
-          <textarea name="" id="" cols="108" rows="10"></textarea>
+          <label for="name" class="name">Nom</label>
+          <input  id="name" name="name"/>
+          <label for="mail" class="mail">Email</label>
+          <input  id="mail" name="mail"/>
+          <label for="txtmessage" class="textmessage">Votre message</label>
+          <textarea name="message" id="txtmessage" cols="108" rows="10"></textarea>
         </div>
         <button class="contact_button">Envoyer</button>
       </form>

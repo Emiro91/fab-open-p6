@@ -139,9 +139,7 @@ function getmediasPage() {
     const divlike1 = document.createElement("div");
     divlike1.setAttribute("id", "like");
     divlike1.setAttribute("class", "like");
-    //divlike1.textContent = likes;
-    // divlike1.setAttribute("onclick", "{buttonClick()}");
-
+  
     const buttonp = document.createElement("button")
     buttonp.setAttribute("class", "btnlike");
     buttonp.setAttribute("id", "likeButton");
@@ -166,7 +164,6 @@ function getmediasPage() {
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
 
-        // buttonp.appendChild(buttoni);
         divinfo.appendChild(divlike1);
         divlike1.appendChild(buttonp);
         divlike1.appendChild(buttoni);
@@ -191,7 +188,6 @@ function getmediasPage() {
         li.appendChild(divlike);
         divlike.appendChild(namep);
         divinfo.appendChild(infop);
-        // buttonp.appendChild(buttoni);
         divinfo.appendChild(divlike1);
         divlike1.appendChild(buttonp);
         divlike1.appendChild(buttoni);

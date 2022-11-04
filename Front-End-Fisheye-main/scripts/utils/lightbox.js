@@ -120,16 +120,11 @@ function showMedia(index) {
 
 // Use lightbox through keyboard
 
-/*function keydown (e) {
-  if (e.key === 'Escape') {
-    this.close(e)
-  } else if (e.key = 'ArrowLeft') {
-    this.prev(e)}
-    else if (e.key = 'ArrowRight') {
-      this.next(e)}
-}*/
 
-function keyDown(e) {
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
   switch (e.key) {
     case 'ArrowLeft':
       document.getElementById('previousMedia')?.click();
@@ -144,5 +139,5 @@ function keyDown(e) {
       break;
       // no default
   }
-}
+});
 
