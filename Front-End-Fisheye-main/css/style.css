@@ -73,3 +73,33 @@ a {
 .photographer_section article p{
     color: #525252;
 }
+
+@media only screen and (max-width: 125px) { 
+    .photographer_section {
+        display: grid;
+        grid-template-columns: none;
+      }}
+
+      @media only screen and (max-width: 480px) { 
+        .photographer_section {
+        display: grid;
+        grid-template-columns: none;
+          }
+          header {
+            display: flex;
+            flex-direction: column;
+            height: 30px;
+          }
+        }
+
+          @media only screen and (max-width: 680px) { 
+            .photographer_section {
+            display: grid;
+            grid-template-columns: none;
+              }
+              header {
+                display: flex;
+                flex-direction: column;
+                height: 90px;
+              }
+            }

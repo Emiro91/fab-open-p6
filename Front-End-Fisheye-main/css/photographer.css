@@ -206,10 +206,21 @@ form input {
     font-size: 25px;
   }
 
-  @media only screen and (max-width: 320px) { 
-    .media-img {
+  @media only screen and (max-width: 125px) { 
+    #medialist{
       display: grid;
-      grid-template-columns: repeat(auto-fill, 40px);  
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .lightboxMedia{
+      width: 40px;
+      height: 40px;
+  }
+  }
+
+  @media only screen and (max-width: 320px) { 
+    #medialist {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);  
       
   }
     .lightboxMedia{
@@ -219,9 +230,10 @@ form input {
   }
 
   @media only screen and (max-width: 480px) { 
-    .media-img {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 40px);  
+    
+    #medialist {
+      display: grid;
+    grid-template-columns: repeat(auto-fill);  
     
 }
   .lightboxMedia{
@@ -231,9 +243,9 @@ form input {
 }
 
 @media screen and (max-width: 680px) { 
-  .media-img {
+  #medialist {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 40px);  
+    grid-template-columns: repeat(auto-fill);  
 }
   .lightboxMedia{
     width: 40px;
@@ -242,12 +254,10 @@ form input {
 }
 
   @media screen and (max-width: 780px) { 
-    .media-img {
+    #medialist {
       display: grid;
       grid-template-columns: repeat(auto-fill);  
-      grid-gap: 350px;
-      width: 200px;
-      height: 200px;
+      
   }
     .lightboxMedia{
       width: 200px;
