@@ -1,7 +1,7 @@
 function displayModal() {
   const modal = document.getElementById("contact_modal");
   modal.style.display = "block";
-  const first = document.getElementById('firstname');
+  const first = document.getElementById('surname');
   first.focus();
 }
 
@@ -67,16 +67,17 @@ function validate() {
     if (!toValidate(name, errorname, errorMsgname, regexname)) return false;
   
     //avec regex
-    let email = document.forms["formulaire"]["email"];
+    let email = document.forms["formulaire"]["mail"];
     let regexemail = /(.+)@(.+){2,}\.(.+){2,}/;
     let erroremail = 'erroremail';
     let errorMsgemail = 'Veuillez entrez un em@il valide';
     if (!toValidate(email, erroremail, errorMsgemail, regexemail)) return false;
   
     //sans regex
-    let message = document.forms["formulaire"]["location"];
+    let message = document.forms["formulaire"]["txtmessage"];
     let errormessage = 'errormessage';
     let errorMsgmessage = "Veuillez entrer un message valide";
     if (!toValidate(message, errormessage, errorMsgmessage)) return false;
-    closeForm();
+    console.log(surname.value,name.value,email.value,message.value);
+    closeModal();
     return false;}
