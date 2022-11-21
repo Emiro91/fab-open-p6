@@ -26,7 +26,6 @@
     background-color: #901C1C;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 150px;
 }
 .contact_button:hover {
   --tw-bg-opacity: 1;
@@ -140,6 +139,7 @@ form input {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    margin-left: 90px;
   }
   
 
@@ -177,7 +177,8 @@ form input {
   .header-like {
     display: flex;
     align-items: baseline;
-    gap: 50px;
+    justify-content: space-between;
+    width: 375px;
   }
   .item-info {
     display: flex;

@@ -31,8 +31,8 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
         const mediaListArrayFilteredByUser = mediaListArrayFiltered.sort(function (a, b) {
             let x = a.title;
             let y = b.title;
-            if (x < y) return 1;
-            if (x > y) return -1;
+            if (x < y) return -1;
+            if (x > y) return 1;
             return 0;
         });
         return mediaListArrayFilteredByUser;
