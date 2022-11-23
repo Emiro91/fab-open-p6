@@ -132,7 +132,10 @@ form input {
         border-radius: 5px;
         cursor: pointer;
         margin-top: 150px;
+        border-radius: 3px;
   }
+
+
 
   #medialist{
     display: grid;
