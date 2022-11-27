@@ -109,6 +109,10 @@ form input {
     object-fit: cover;
     border-radius: 50%;
 }
+
+.villes{
+  color: #901C1C;
+}
 /*.filter {
   display: flex;
   flex-direction: row;

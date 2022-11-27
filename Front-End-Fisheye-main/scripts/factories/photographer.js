@@ -64,6 +64,7 @@ function getProfilePage() {
     const location = document.createElement("div");
     location.setAttribute("class", "location");
     const villePays = document.createElement("span");
+    villePays.setAttribute("class", "villes");
     villePays.textContent = city.concat(", ", country);
     const bio = document.createElement("p");
     bio.textContent = tagline;
