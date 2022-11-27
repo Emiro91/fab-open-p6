@@ -18,8 +18,8 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
         const mediaListArrayFilteredByUser = mediaListArrayFiltered.sort(function (a, b) {
             let x = a.likes
             let y = b.likes;
-            if (x < y) return 1;
-            if (x > y) return -1;
+            if (x < y) return -1;
+            if (x > y) return 1;
             return 0;
         });
         return mediaListArrayFilteredByUser;

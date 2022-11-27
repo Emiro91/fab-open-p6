@@ -109,7 +109,7 @@ form input {
     object-fit: cover;
     border-radius: 50%;
 }
-.filter {
+/*.filter {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -134,7 +134,94 @@ form input {
         margin-top: 150px;
         border-radius: 3px;
   }
+*/
 
+/*code test pour le bouton trier*/
+.sort {
+	margin-top: 25px;
+	margin-left: 100px;
+  margin-bottom: 70px;
+	}
+	
+	.sort .dropdown:hover .dropbtn .fa-angle-down
+	{
+	display: none;
+	}
+	
+	.sort .dropdown .dropbtn .fa-angle-up
+	{
+	display: none;
+	}
+	
+	
+	.sort .dropdown:hover .dropbtn .fa-angle-up
+	{
+	display: block;
+	}
+	
+	.dropbtn {
+	background-color: #901C1C;
+	color: white;
+	padding: 17px;
+	font-size: 16px;
+	border: none;
+	width: 160px;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 3px 3px 0 0;
+	}
+	
+	.dropdown {
+	position: relative;
+	display: inline-block;
+	}
+	
+	.dropdown-content {
+	text-align: left;
+	display: none;
+	position: absolute;
+	background-color: #901C1C;
+	min-width: 160px;
+	z-index: 1;
+	border-radius: 3px;
+	margin: 0px;
+	margin-top: -2px;
+	padding-inline-start: 0px;
+	}
+	
+	.dropdown-content li {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	margin-block-start: 0;
+	margin-block-end: 0;
+	cursor: pointer;
+	}
+	.dropdown-content--border {
+	position: absolute;
+	border-top: 2px solid white;
+	left: 7px;
+	right: 7px;
+	}
+	.dropdown-content a:hover {
+	background-color: #901C1C;
+	}
+	
+	.dropdown:hover .dropdown-content {
+	display: block;
+	}
+	
+	.dropdown:hover .dropbtn {
+	background-color: #901C1C;
+	}
+	
+	#popularite{
+	display: none;
+	}
+
+/*fin du code test*/
 
 
   #medialist{
@@ -173,7 +260,7 @@ form input {
     height: 25px;
   }
  
- #icon-heart{
+ #icon-heart,.item-name{
   color: #901C1C;
     }
 
