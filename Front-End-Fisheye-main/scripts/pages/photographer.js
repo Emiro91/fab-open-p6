@@ -39,7 +39,7 @@ async function medialist(photographer) {
    getTotalLikes(photographer);
 };
 
-const selectbox = document.getElementById("selectbox");
+//const selectbox = document.getElementById("selectbox");
 
  
 async function init() {
@@ -47,11 +47,20 @@ async function init() {
     const photographer = await getPhotographer();
     displayData(photographer.photographers);
     medialist(photographer.media);
-    selectbox.addEventListener("change", (e) => {
+  /*  selectbox.addEventListener("change", (e) => {
         let photographerMediaList = mediaFilter(photographer.media, e.target.value);
         console.log("photographer media", photographerMediaList);
         medialist(photographerMediaList);
-    });
+    });*/
+    document.getElementById('dropdown-content').addEventListener('click', (e) => {
+      /*document.getElementById('sort-button-content').innerHTML = e.target.innerHTML;
+      console.log(e.target.innerHTML);
+      mediaArray = mediaFilter(e.target.id, mediaArray);*/
+     // displayMediaData(mediaArray);
+      let photographerMediaList = mediaFilter(photographer.media, e.target.innerHTML.toLowerCase());
+        console.log("photographer media", photographerMediaList);
+        medialist(photographerMediaList);
+      });
 
 // Event to add likes with keyboard
 document.addEventListener('keydown', (e) => {

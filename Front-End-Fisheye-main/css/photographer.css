@@ -113,32 +113,6 @@ form input {
 .villes{
   color: #901C1C;
 }
-/*.filter {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  justify-content: start;
-  margin-left: 100px;
-  gap: 15px;
-  margin-top: -40px;
-  margin-bottom: 50px;
-  }
-
-.filter-select {
-        font-size: 20px;
-        font-weight: bold;
-        color: white;
-        padding: 11px;
-        width: 170px;
-        height: 70px;
-        border: none;
-        background-color: #901C1C;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 150px;
-        border-radius: 3px;
-  }
-*/
 
 /*code test pour le bouton trier*/
 .sort {

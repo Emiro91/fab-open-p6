@@ -1,9 +1,10 @@
 // Event to sort media
-document.getElementById('dropdown-content').addEventListener('click', (e) => {
+/*document.getElementById('dropdown-content').addEventListener('click', (e) => {
 	document.getElementById('sort-button-content').innerHTML = e.target.innerHTML;
-	mediaArray = sortMedia(e.target.id, mediaArray);
+	console.log(e.target.innerHTML);
+	mediaArray = mediaFilter(e.target.id, mediaArray);
 	displayMediaData(mediaArray);
-	});
+	});*/
 	
 	// Event to sort media with keyboard
 	let isDropDownOpen = false;
