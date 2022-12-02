@@ -2,7 +2,7 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
 
     console.log(mediaListArrayFiltered, photographerItem);
 
-    
+
 
 
     if (photographerItem === 'date') {
@@ -14,7 +14,7 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
 
     }
 
-    if (photographerItem === 'popularite') {
+    if (photographerItem === 'popularité') {
         const mediaListArrayFilteredByUser = mediaListArrayFiltered.sort(function (a, b) {
             let x = a.likes
             let y = b.likes;
@@ -39,5 +39,5 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
 
 
     }
- 
+
 }
