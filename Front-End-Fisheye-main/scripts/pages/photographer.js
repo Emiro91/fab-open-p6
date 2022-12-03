@@ -58,7 +58,8 @@ async function init() {
     let cibleData = document.getElementById('sort-button-content').innerHTML;
 
     document.getElementById('sort-button-content').innerHTML = e.target.innerHTML;
-    e.target.innerHTML= cibleData;
+    let photographerMediaList = mediaFilter(photographer.media, e.target.innerHTML.toLowerCase());
+    e.target.innerHTML = cibleData;
 
 
 
@@ -67,7 +68,7 @@ async function init() {
     console.log(e.target.innerHTML);
     mediaArray = mediaFilter(e.target.id, mediaArray);*/
     // displayMediaData(mediaArray);
-    let photographerMediaList = mediaFilter(photographer.media, e.target.innerHTML.toLowerCase());
+
     console.log("photographer media", photographerMediaList);
     medialist(photographerMediaList);
   });
