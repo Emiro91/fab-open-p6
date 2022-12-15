@@ -140,21 +140,18 @@ function getmediasPage() {
     const divlike1 = document.createElement("div");
     divlike1.setAttribute("id", "like");
     divlike1.setAttribute("class", "like");
-  
+
     const buttonp = document.createElement("button")
     buttonp.setAttribute("class", "btnlike");
     buttonp.setAttribute("id", "likeButton");
     buttonp.textContent = likes;
 
-    const btn= document.createElement("button");
-
-
     const buttoni = document.createElement("i");
-    btn.setAttribute("class","likeheart");
-    buttoni.setAttribute("class", "fa fa-heart");
+    buttoni.setAttribute("class", "fa fa-heart likeheart");
     buttoni.setAttribute("id", "icon-heart");
+    buttoni.setAttribute("tabindex", "0");
     buttoni.setAttribute("aria-hidden", "true");
-    btn.appendChild(buttoni);
+    // btn.appendChild(buttoni);
 
     // If JPG -> <img>
     if (jpg.split('.').pop() === 'jpg') {
@@ -172,13 +169,14 @@ function getmediasPage() {
 
         divinfo.appendChild(divlike1);
         divlike1.appendChild(buttonp);
-        divlike1.appendChild(btn);
+        divlike1.appendChild(buttoni);
+        buttoni.appendChild(buttonp);
         divlike.appendChild(divinfo);
     }
     // If MP4 -> <video>
     if (mp4.split('.').pop() === 'mp4') {
         const videoPlayer = document.createElement('video');
-        videoPlayer.setAttribute('controls', '');
+        // videoPlayer.setAttribute('controls', '');
         videoPlayer.setAttribute('class', 'lightboxMedia');
         const source = document.createElement('source');
         source.setAttribute('src', mp4);
@@ -196,7 +194,7 @@ function getmediasPage() {
         divinfo.appendChild(infop);
         divinfo.appendChild(divlike1);
         divlike1.appendChild(buttonp);
-        divlike1.appendChild(btn);
+        divlike1.appendChild(buttoni);
         divlike.appendChild(divinfo);
 
     }

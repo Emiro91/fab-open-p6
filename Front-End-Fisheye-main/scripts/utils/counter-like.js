@@ -11,6 +11,7 @@ document.addEventListener('click', (e) => {
       }
 
   }
+  
 });
 
 // Add ❤️ to "media/photograph"
