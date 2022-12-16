@@ -1,18 +1,21 @@
-// Event to add likes
-document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('likeheart')) {
+
+ // Event to add likes with keyboard
+ document.addEventListener('keydown', (e) => {
+  if (e.code === 'Enter') {
+    if (e.target.classList.contains('likeheart')) {
+      // incrementLike(e.target);
       let tag = e.target;
       if (tag.classList.contains('liked')) {
-          decrementLike(e.target);
-          tag.classList.remove('liked');
+        decrementLike(e.target);
+        tag.classList.remove('liked');
       } else {
-          incrementLike(e.target);
-          tag.classList.add('liked');
+        incrementLike(e.target);
+        tag.classList.add('liked');
       }
-
+    }
   }
-  
 });
+  
 
 // Add ❤️ to "media/photograph"
 // FUNCTION ET SON (PARAMETRE)
