@@ -76,8 +76,16 @@ async function init() {
   // Event to add likes with keyboard
   document.addEventListener('keydown', (e) => {
     if (e.code === 'Enter') {
-      if (e.target.classList.contains('incrementLike')) {
-        incrementLike(e.target);
+      if (e.target.classList.contains('likeheart')) {
+        // incrementLike(e.target);
+        let tag = e.target;
+        if (tag.classList.contains('liked')) {
+          decrementLike(e.target);
+          tag.classList.remove('liked');
+        } else {
+          incrementLike(e.target);
+          tag.classList.add('liked');
+        }
       }
     }
   });

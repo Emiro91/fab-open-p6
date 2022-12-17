@@ -15,193 +15,192 @@ function photographerFactory(data) {
 
     const picture = `assets/photographers/${portrait}`;
 
-function getUserCardDOM() {
-    const article = document.createElement('article');
+    function getUserCardDOM() {
+        const article = document.createElement('article');
 
-    const img = document.createElement('img');
-    img.setAttribute("src", picture)
-    img.setAttribute("class", "card-img")
-
-    const h2 = document.createElement('h2');
-    h2.textContent = name;
-
-    const h3 = document.createElement("h3");
-    h3.textContent = `${city}, ${country}`;
-
-    const h4 = document.createElement("h4");
-    h4.textContent = tagline;
-
-    const p = document.createElement("p");
-    p.textContent = `${price}€/jour`;
-
-    const ahref = document.createElement("a");
-    ahref.setAttribute("class", "link");
-    ahref.setAttribute("aria-label", `${name}`);
-    ahref.setAttribute("href", `photographer.html?id=${id}`);
-
-    ahref.appendChild(article);
-    article.appendChild(img);
-    article.appendChild(h2);
-    article.appendChild(h3);
-    article.appendChild(h4);
-    article.appendChild(p);
-
-    return ahref;
-}
-
-function getProfilePage() {
-    const photographHeader = document.createElement("div");
-    photographHeader.setAttribute("class", "photograph-header");
-
-    const mainInfos = document.createElement("div");
-    mainInfos.setAttribute("class", "photograph-infos");
-    mainInfos.setAttribute("tabindex", "0");
-
-    const fullname = document.createElement("h1");
-    fullname.setAttribute("class", "names");
-    fullname.textContent = name;
-
-    const location = document.createElement("div");
-    location.setAttribute("class", "location");
-    const villePays = document.createElement("span");
-    villePays.setAttribute("class", "villes");
-    villePays.textContent = city.concat(", ", country);
-    const bio = document.createElement("p");
-    bio.textContent = tagline;
-
-    const contactButton = document.createElement("button");
-    contactButton.setAttribute("id", "contact_button");
-    contactButton.setAttribute("class", "contact_button");
-    contactButton.setAttribute("onclick", "displayModal()");
-    contactButton.textContent = "Contactez-moi";
-
-    const profileImg = document.createElement("img");
-    profileImg.setAttribute("src", `assets/photographers/${portrait}`);
-    profileImg.setAttribute("class", "photographImg");
-    profileImg.setAttribute("alt", name);
-    profileImg.setAttribute("tabindex", "0");
-
-    const priceLikes = document.createElement("div");
-    priceLikes.setAttribute("class", "price");
-    const likesSpan = document.createElement("span");
-    likesSpan.setAttribute("class", "compteurLikeTotal");
-    likesSpan.textContent = likes;
-
-    const heart = document.createElement("span");
-    heart.setAttribute("aria-label", "likes");
-    heart.setAttribute("class", "fa fa-heart");
-    const priceDay = document.createElement("span");
-    priceDay.textContent = `${price}€ /jour`;
-
-    photographHeader.appendChild(mainInfos);
-    mainInfos.appendChild(fullname);
-    mainInfos.appendChild(location);
-    location.appendChild(villePays);
-    location.appendChild(bio);
-    photographHeader.appendChild(contactButton);
-    photographHeader.appendChild(profileImg);
-
-    photographHeader.appendChild(priceLikes);
-    priceLikes.appendChild(likesSpan);
-    likesSpan.appendChild(heart);
-    priceLikes.appendChild(priceDay);
-    return photographHeader;
-}
-
-function getmediasPage() {
-
-
-    const jpg = `assets/images/media/${image}`;
-    const mp4 = `assets/images/media/${video}`;
-    const li = document.createElement("li");
-
-    const ahref = document.createElement("a");
-    ahref.setAttribute("class", "cards-media-img");
-    ahref.setAttribute("role", "button");
-    ahref.setAttribute("title", title);
-    ahref.setAttribute("aria-describedby", "ouvrir le slider");
-    ahref.setAttribute("href", "#");
-
-    const divlike = document.createElement("div");
-    divlike.setAttribute("class", "header-like");
-
-    const namep = document.createElement("p")
-    namep.setAttribute("class", "item-name");
-    namep.textContent = title;
-
-    const divinfo = document.createElement("div");
-    divinfo.setAttribute("class", "item-info");
-
-    const infop = document.createElement("p");
-    infop.setAttribute("class", "info-prices");
-    infop.setAttribute("id", "likeCounter");
-    infop.textContent = `${price} €`;
-
-    const divlike1 = document.createElement("div");
-    divlike1.setAttribute("id", "like");
-    divlike1.setAttribute("class", "like");
-
-    const buttonp = document.createElement("button")
-    buttonp.setAttribute("class", "btnlike");
-    buttonp.setAttribute("id", "likeButton");
-    buttonp.textContent = likes;
-
-    const buttoni = document.createElement("i");
-    buttoni.setAttribute("class", "fa fa-heart likeheart");
-    buttoni.setAttribute("id", "icon-heart");
-    buttoni.setAttribute("tabindex", "0");
-    buttoni.setAttribute("aria-hidden", "true");
-    // btn.appendChild(buttoni);
-
-    // If JPG -> <img>
-    if (jpg.split('.').pop() === 'jpg') {
         const img = document.createElement('img');
-        img.setAttribute('class', 'lightboxMedia');
-        img.setAttribute('src', jpg);
-        img.setAttribute('alt', title);
-        img.setAttribute('tabindex', '0');
+        img.setAttribute("src", picture)
+        img.setAttribute("class", "card-img")
 
-        li.appendChild(ahref);
-        li.appendChild(img);
-        li.appendChild(divlike);
-        divlike.appendChild(namep);
-        divinfo.appendChild(infop);
+        const h2 = document.createElement('h2');
+        h2.textContent = name;
 
-        divinfo.appendChild(divlike1);
-        divlike1.appendChild(buttonp);
-        divlike1.appendChild(buttoni);
-        buttoni.appendChild(buttonp);
-        divlike.appendChild(divinfo);
-    }
-    // If MP4 -> <video>
-    if (mp4.split('.').pop() === 'mp4') {
-        const videoPlayer = document.createElement('video');
-        // videoPlayer.setAttribute('controls', '');
-        videoPlayer.setAttribute('class', 'lightboxMedia');
-        const source = document.createElement('source');
-        source.setAttribute('src', mp4);
-        source.setAttribute('type', 'video/mp4');
-        source.setAttribute('class', 'lightboxImg');
-        source.setAttribute('tabindex', '0');
+        const h3 = document.createElement("h3");
+        h3.textContent = `${city}, ${country}`;
 
+        const h4 = document.createElement("h4");
+        h4.textContent = tagline;
 
+        const p = document.createElement("p");
+        p.textContent = `${price}€/jour`;
 
-        li.appendChild(ahref);
-        li.appendChild(videoPlayer);
-        videoPlayer.appendChild(source);
-        li.appendChild(divlike);
-        divlike.appendChild(namep);
-        divinfo.appendChild(infop);
-        divinfo.appendChild(divlike1);
-        divlike1.appendChild(buttonp);
-        divlike1.appendChild(buttoni);
-        divlike.appendChild(divinfo);
+        const ahref = document.createElement("a");
+        ahref.setAttribute("class", "link");
+        ahref.setAttribute("aria-label", `${name}`);
+        ahref.setAttribute("href", `photographer.html?id=${id}`);
 
+        ahref.appendChild(article);
+        article.appendChild(img);
+        article.appendChild(h2);
+        article.appendChild(h3);
+        article.appendChild(h4);
+        article.appendChild(p);
+
+        return ahref;
     }
 
-    return li;
-}
-    
+    function getProfilePage() {
+        const photographHeader = document.createElement("div");
+        photographHeader.setAttribute("class", "photograph-header");
+
+        const mainInfos = document.createElement("div");
+        mainInfos.setAttribute("class", "photograph-infos");
+        mainInfos.setAttribute("tabindex", "0");
+
+        const fullname = document.createElement("h1");
+        fullname.setAttribute("class", "names");
+        fullname.textContent = name;
+
+        const location = document.createElement("div");
+        location.setAttribute("class", "location");
+        const villePays = document.createElement("span");
+        villePays.setAttribute("class", "villes");
+        villePays.textContent = city.concat(", ", country);
+        const bio = document.createElement("p");
+        bio.textContent = tagline;
+
+        const contactButton = document.createElement("button");
+        contactButton.setAttribute("id", "contact_button");
+        contactButton.setAttribute("class", "contact_button");
+        contactButton.setAttribute("onclick", "displayModal()");
+        contactButton.textContent = "Contactez-moi";
+
+        const profileImg = document.createElement("img");
+        profileImg.setAttribute("src", `assets/photographers/${portrait}`);
+        profileImg.setAttribute("class", "photographImg");
+        profileImg.setAttribute("alt", name);
+        profileImg.setAttribute("tabindex", "0");
+
+        const priceLikes = document.createElement("div");
+        priceLikes.setAttribute("class", "price");
+        const likesSpan = document.createElement("span");
+        likesSpan.setAttribute("class", "compteurLikeTotal");
+        likesSpan.textContent = likes;
+
+        const heart = document.createElement("span");
+        heart.setAttribute("aria-label", "likes");
+        heart.setAttribute("class", "fa fa-heart");
+        const priceDay = document.createElement("span");
+        priceDay.textContent = `${price}€ /jour`;
+
+        photographHeader.appendChild(mainInfos);
+        mainInfos.appendChild(fullname);
+        mainInfos.appendChild(location);
+        location.appendChild(villePays);
+        location.appendChild(bio);
+        photographHeader.appendChild(contactButton);
+        photographHeader.appendChild(profileImg);
+
+        photographHeader.appendChild(priceLikes);
+        priceLikes.appendChild(likesSpan);
+        likesSpan.appendChild(heart);
+        priceLikes.appendChild(priceDay);
+        return photographHeader;
+    }
+
+    function getmediasPage() {
+
+
+        const jpg = `assets/images/media/${image}`;
+        const mp4 = `assets/images/media/${video}`;
+        const li = document.createElement("li");
+
+        const ahref = document.createElement("a");
+        ahref.setAttribute("class", "cards-media-img");
+        ahref.setAttribute("role", "button");
+        ahref.setAttribute("title", title);
+        ahref.setAttribute("aria-describedby", "ouvrir le slider");
+        ahref.setAttribute("href", "#");
+
+        const divlike = document.createElement("div");
+        divlike.setAttribute("class", "header-like");
+
+        const namep = document.createElement("p")
+        namep.setAttribute("class", "item-name");
+        namep.textContent = title;
+
+        const divinfo = document.createElement("div");
+        divinfo.setAttribute("class", "item-info");
+
+        const infop = document.createElement("p");
+        infop.setAttribute("class", "info-prices");
+        infop.setAttribute("id", "likeCounter");
+        infop.textContent = `${price} €`;
+
+        const divlike1 = document.createElement("div");
+        divlike1.setAttribute("id", "like");
+        divlike1.setAttribute("class", "like");
+
+        const buttonp = document.createElement("button")
+        buttonp.setAttribute("class", "btnlike");
+        buttonp.setAttribute("id", "likeButton");
+        buttonp.textContent = likes;
+
+        const buttoni = document.createElement("i");
+        buttoni.setAttribute("class", "fa fa-heart likeheart");
+        buttoni.setAttribute("id", "icon-heart");
+        buttoni.setAttribute("tabindex", "0");
+        buttoni.setAttribute("aria-hidden", "true");
+        // btn.appendChild(buttoni);
+
+        // If JPG -> <img>
+        if (jpg.split('.').pop() === 'jpg') {
+            const img = document.createElement('img');
+            img.setAttribute('class', 'lightboxMedia');
+            img.setAttribute('src', jpg);
+            img.setAttribute('alt', title);
+            img.setAttribute('tabindex', '0');
+
+            li.appendChild(ahref);
+            li.appendChild(img);
+            li.appendChild(divlike);
+            divlike.appendChild(namep);
+            divinfo.appendChild(infop);
+
+            divinfo.appendChild(divlike1);
+            divlike1.appendChild(buttonp);
+            divlike1.appendChild(buttoni);
+            divlike.appendChild(divinfo);
+        }
+        // If MP4 -> <video>
+        if (mp4.split('.').pop() === 'mp4') {
+            const videoPlayer = document.createElement('video');
+            // videoPlayer.setAttribute('controls', '');
+            videoPlayer.setAttribute('class', 'lightboxMedia');
+            const source = document.createElement('source');
+            source.setAttribute('src', mp4);
+            source.setAttribute('type', 'video/mp4');
+            source.setAttribute('class', 'lightboxImg');
+            source.setAttribute('tabindex', '0');
+
+
+
+            li.appendChild(ahref);
+            li.appendChild(videoPlayer);
+            videoPlayer.appendChild(source);
+            li.appendChild(divlike);
+            divlike.appendChild(namep);
+            divinfo.appendChild(infop);
+            divinfo.appendChild(divlike1);
+            divlike1.appendChild(buttonp);
+            divlike1.appendChild(buttoni);
+            divlike.appendChild(divinfo);
+
+        }
+
+        return li;
+    }
+
 
     return {
         id,

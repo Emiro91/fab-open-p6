@@ -1,21 +1,17 @@
-
- // Event to add likes with keyboard
- document.addEventListener('keydown', (e) => {
-  if (e.code === 'Enter') {
-    if (e.target.classList.contains('likeheart')) {
-      // incrementLike(e.target);
-      let tag = e.target;
-      if (tag.classList.contains('liked')) {
-        decrementLike(e.target);
-        tag.classList.remove('liked');
-      } else {
-        incrementLike(e.target);
-        tag.classList.add('liked');
-      }
+// Event to add likes
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('likeheart')) {
+    let tag = e.target;
+    if (tag.classList.contains('liked')) {
+      decrementLike(e.target);
+      tag.classList.remove('liked');
+    } else {
+      incrementLike(e.target);
+      tag.classList.add('liked');
     }
+
   }
 });
-  
 
 // Add ❤️ to "media/photograph"
 // FUNCTION ET SON (PARAMETRE)
@@ -46,9 +42,8 @@ function getTotalLikes(data) {
   let totalLikes = 0;
 
   data.forEach((media) => {
-      totalLikes += media.likes;
+    totalLikes += media.likes;
   });
   // eslint-disable-next-line no-useless-concat
   document.querySelector('.compteurLikeTotal').innerHTML = `${totalLikes} ` + '<span class=\'fas fa-heart\'></span>';
 }
-
